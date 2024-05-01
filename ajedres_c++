@@ -1,0 +1,47 @@
+#include <iostream>
+#include <vector>
+
+// Definición de la clase Pieza que servirá como base para las distintas piezas de ajedrez
+class Pieza {
+public:
+    virtual void mover() = 0; // Función virtual pura para mover la pieza
+};
+
+// Definición de las clases para cada tipo de pieza (Peón, Torre, Caballo, etc.)
+class Peon : public Pieza {
+public:
+    void mover() override {
+        // Implementación para mover el peón
+    }
+};
+
+class Torre : public Pieza {
+public:
+    void mover() override {
+        // Implementación para mover la torre
+    }
+};
+
+// Clase Tablero que contendrá las piezas y gestionará el juego
+class Tablero {
+private:
+    std::vector<Pieza*> piezas; // Vector de punteros a Pieza para almacenar las piezas en el tablero
+
+public:
+    void inicializarTablero() {
+        // Lógica para colocar las piezas en su posición inicial
+    }
+
+    void jugar() {
+        // Lógica principal del juego de ajedrez
+    }
+};
+
+// Función principal que inicia el juego
+int main() {
+    Tablero tablero;
+    tablero.inicializarTablero();
+    tablero.jugar();
+
+    return 0;
+}
